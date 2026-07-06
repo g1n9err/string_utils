@@ -1,4 +1,4 @@
-# string_util
+# string_utils
 
 Custom implementation of common C string functions, without using `<string.h>`.
 
