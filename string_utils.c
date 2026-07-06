@@ -53,7 +53,12 @@ char* my_strcat(char *dest, const char *src) {
 }
 
 int my_strcmp(const char *str1, const char *str2) {
-    if (str1 == NULL || str2 == NULL) return 0;
+    if (str1 == NULL && str2 == NULL)
+        return 0;
+    if (str1 == NULL)
+        return -1;
+    if (str2 == NULL)
+        return 1;
     while (*str1 != '\0' && *str2 != '\0') {
         if (*str1 != *str2) {
             return *str1 - *str2;
@@ -232,12 +237,11 @@ void my_strreverse(char *str) {
     int i = 0;
     char temp;
 
-    while (i < len) {
+    while (i < len / 2) {
         temp = str[i];
-        str[i] = str[len - 1];
-        str[len - 1] = temp;
+        str[i] = str[len - 1 - i];
+        str[len - 1 - i] = temp;
         ++i;
-        --len;
     }
 }
 

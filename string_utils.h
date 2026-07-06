@@ -2,9 +2,8 @@
 #define STRUTILS_H
 
 #include <stdio.h>
-#include <unistd.h>
 #include <stdlib.h>
-//#include <string.h>
+
 /* Standard string.h functions */
 
 int my_strlen(const char *str);
