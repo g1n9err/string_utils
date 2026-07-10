@@ -210,7 +210,7 @@ int my_count_char(const char *str, char ch) {
 int my_strequal(const char *str1, const char *str2) {
     if (str1 == NULL || str2 == NULL) return 0;
 
-    while (*str1 != '\0' || *str2 != '\0') {
+    while (*str1 != '\0' && *str2 != '\0') {
         if (*str1 != *str2) {
             return 0;
         }
